@@ -1,0 +1,36 @@
+﻿@model AspNetCore.Models.Categoria
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Categoria</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.categoriaName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.categoriaName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.catgoriaDescription)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.catgoriaDescription)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.categoriaStatus)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.categoriaStatus)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.categoriaIntId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
